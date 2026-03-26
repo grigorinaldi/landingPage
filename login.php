@@ -1,36 +1,20 @@
+<?php
+include 'data.php';
+?>
+
 <html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giogio móveis</title>
+    <title><?php echo $nomeLoja; ?></title>
     <link rel="stylesheet" href="./landingPage.css">
 </head>
 
 <body>
-    <header>
-        <a href="./landingPage.html">
-            <img src="./Imagens/Giogiomoveis.svg" alt="Logo Giogio Móveis">
-        </a>
-
-        <div class="menu-direita">
-            <nav>
-                <ul class="menu-principal">
-                    <li>
-                        <a href="produtos.html" class="redirecionar_index">
-                            <div class="text-menu">
-                                <p>Produtos</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <a href="login.html">
-                <div class="menu-login">Login</div>
-            </a>
-        </div>
-    </header>
+    <?php
+        require 'partials/header.php';
+    ?>
     <section class="login-container">
         <div class="login-box">
             <h1 class="login-titulo">Bem Vindo(a)!</h1>
@@ -49,7 +33,7 @@
                 <div class="login-botoes">
                     <button type="submit">Entrar</button>
                 </div>
-                    <span class="login-cadastrese">Ainda não está registrado? <a href="cadastro.html">Cadastre-se agora.</a></span>
+                    <span class="login-cadastrese">Ainda não está registrado? <a href="cadastro.php">Cadastre-se agora.</a></span>
             </form>
         </div>
     </section>

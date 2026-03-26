@@ -20,9 +20,11 @@ header {
 }
 
 header img {
-    height: 100px;
+    height: 80px;
     display: absolute;
-    width: 100px;
+    width: 180px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .menu-direita {
@@ -134,7 +136,7 @@ li a:hover::after {
     transform: scale(1.05);
 }
 
-.card_h2 a {
+.link {
     color: #ffffff;
     text-decoration: none;
     font-size: 22px;
@@ -265,7 +267,7 @@ li a:hover::after {
     margin-top: 80px;
 }
 
-.login-cadastrese{
+.login-cadastrese {
     font-size: 20px;
     margin-top: 5px;
     color: #ffffff;
@@ -273,16 +275,16 @@ li a:hover::after {
     text-align: center;
 }
 
-.login-cadastrese a{
+.login-cadastrese a {
     color: #587136;
 }
 
-.login-cadastrese a:hover{
+.login-cadastrese a:hover {
     text-decoration: underline;
     color: #587136;
 }
 
-.login-esqueceu{
+.login-esqueceu {
     font-size: 20px;
     margin-top: -10px;
     color: #587136;
@@ -290,7 +292,7 @@ li a:hover::after {
     text-align: center;
 }
 
-.login-esqueceu:hover{
+.login-esqueceu:hover {
     text-decoration: underline;
     color: #587136;
 }
@@ -367,7 +369,7 @@ li a:hover::after {
     margin-top: 30px;
 }
 
-.login-botoes button a{
+.login-botoes button a {
     text-decoration: none;
     color: #ffffff;
 }
@@ -380,20 +382,141 @@ li a:hover::after {
 
 
 
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    background-color: black;
-    color: #ffffff;
-    font-size: 6px;
+footer {
     text-align: center;
+    color: white;
+    padding: 40px;
+    background: rgba(54, 31, 0, 0.85);
+    font-size: 7px;
 }
 
-footer a{
+footer a {
     text-decoration: none;
     cursor: pointer;
+}
+
+/* DETALHES */
+
+.container-detalhes {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.sessao-produto {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.foto-produto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.foto-produto img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.info-produto {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-produto h1 {
+    color: #361f00;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.cod-produto {
+    color: #888;
+    font-size: 14px;
+}
+
+.preco-pagina {
+    font-size: 40px;
+    color: #b09a5d;
+    font-weight: bold;
+    margin: 20px 0 5px 0;
+}
+
+.parcelamento {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.acoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 50px;
+
+}
+
+.btn-comprar-agora {
+    background-color: #361f00;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+}
+
+.btn-comprar-agora:hover {
+    transform: scale(1.05);
+}
+
+.btn-carrinho {
+    background-color: #b09a5d;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+}
+
+.btn-carrinho:hover {
+    transform: scale(1.05);
+}
+
+.especificacoes-tecnicas {
+    margin-top: 40px;
+}
+
+.tabela-specs {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabela-specs th,
+.tabela-specs td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela-specs th {
+    background-color: #f4f4f4;
+    color: #361f00;
+    width: 30%;
 }
 
 /* RESPONSIVO */

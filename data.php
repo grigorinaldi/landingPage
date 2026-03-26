@@ -1,0 +1,2 @@
+<?php
+$nomeLoja = "GIOGIO'S";
