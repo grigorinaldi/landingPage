@@ -19,41 +19,39 @@ include 'data.php';
         <div class="login-box">
             <h1 class="login-titulo">Cadastre-se aqui!</h1>
 
-            <form class="login-formulario">
+            <form action="recebe.php" method="POST" class="login-formulario">
 
                 <div class="login-campo login-campo-full">
                     <label for="nome">Nome</label>
-                    <input type="nome" id="nome" name="nome">
+                    <input type="nome" placeholder="" name="nome">
                 </div>
                 
                 <div class="login-campo login-campo-full">
                     <label for="e-mail">E-mail</label>
-                    <input type="e-mail" id="e-mail" name="e-mail">
+                    <input type="email" placeholder="" name="email">
                 </div>
 
                 <div class="login-campo login-campo-full">
                     <label for="senha">Senha</label>
-                    <input type="senha" id="senha" name="senha">
+                    <input type="text" placeholder="" name="senha">
                 </div>
 
                 <div class="login-campo login-campo-full">
                     <label for="confirmar senha">Confirme sua senha</label>
-                    <input type="senha" id="senha" name="senha">
+                    <input type="text" placeholder="" name="confirmacao">
                 </div>
 
                 <div class="login-botoes">
-                    <button type="submit"><a href="landingPage.php">Registrar</a></button>
+                    <button type="submit"><a>Registrar</a></button>
                 </div>
             </form>
         </div>
     </section>
 </body>
 
-<footer>
-    <h1><a>Condições de Uso</a> | <a>Notificação de Privacidade</a> | <a>Cookies</a> | <a>Anúncios Baseados em
-            Interesses</a><br>
-        © 2021-2026 Amazon.com, Inc. ou suas afiliadas</h1>
-</footer>
+<?php
+        require 'partials/footer.php';
+    ?>
 </body>
 
 </html>

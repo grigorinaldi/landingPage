@@ -75,9 +75,8 @@ include 'data.php';
         </div>
     </main>
 
-    <footer>
-        <h1><a>Condições de Uso</a> | <a>Notificação de Privacidade</a> | <a>Cookies</a><br>
-            © 2021-2026 Giogio Móveis. Todos os direitos reservados.</h1>
-    </footer>
+    <?php
+        require 'partials/footer.php';
+    ?>
 </body>
 </html>
