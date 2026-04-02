@@ -1,12 +1,8 @@
 <?php
-include 'data.php';
-//print '<pre>';
-//print_r($produtos_base);
-
+require_once "init.php";
 ?>
-
-<html>
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,35 +11,35 @@ include 'data.php';
 </head>
 
 <body>
-    <?php
-    require 'partials/header.php';
-    ?>
-    <div class="catalogo-filtro">
-        <ul class="lista-catalogo">
+    <?php require 'partials/header.php'; ?>
+
+    <main class="conteudo">
+        <div class="catalogo-filtro">
+            <ul class="lista-catalogo">
+                <?php
+                foreach ($categorias as $kcat => $nome) {
+                    print '<a href="produtos.php?categorias='.$kcat.'">'.$nome."</a>";
+                }
+                ?>
+            </ul>
+        </div>
+
+        <div class="juntar">
             <?php
-            foreach ($categorias as $kcat => $nome) {
-                print '<li><a href="#">' . $nome . '</a></li>';
+            foreach ($_SESSION["produtos"] as $produto) {
+                print '
+                <div class="card">
+                    <img src="' . $produto['imagem'] . '" width="300" height="170">
+                    <h2>' . $produto['nome'] . '<br><br>R$ ' . number_format($produto['preco'], 2, ',', '.') . '</h2>
+                    <a href="#" class="link">
+                        <h3 class="card_h2">Comprar</h3>
+                    </a>
+                </div>';
             }
             ?>
-        </ul>
-    </div>
-    <div class="juntar">
-        <?php
-        foreach ($produtos_base as $produto) {
-            print '
-                <div class="card">
-            <img src="' . $produto['imagem'] . 'width="300" height="170">
-            <h2>' . $produto['nome'] . '<br><br>' . $produto['preco'] . '</h2>
-            <a href="#" class="link">
-                <h3 class="card_h2">Comprar</h3>
-            </a>
-        </div>';
-        }
-        ?>
+        </div>
+    </main>
 
-        <?php
-        require 'partials/footer.php';
-        ?>
+    <?php require 'partials/footer.php'; ?>
 </body>
-
 </html>

@@ -16,6 +16,18 @@
                 </ul>
             </nav>
 
+            <nav>
+                <ul class="menu-principal">
+                    <li>
+                        <a href="cadastro_produto.php" class="redirecionar_index">
+                            <div class="text-menu">
+                                <p>Cadastrar produto</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
             <a href="login.php">
                 <div class="menu-login">Login</div>
             </a>
