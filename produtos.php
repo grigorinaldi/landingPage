@@ -1,5 +1,6 @@
 <?php
 require_once "init.php";
+$categoria_get = isset($_GET["categoria"])? trim($_GET["categoria"]):"";
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -18,7 +19,7 @@ require_once "init.php";
             <ul class="lista-catalogo">
                 <?php
                 foreach ($categorias as $kcat => $nome) {
-                    print '<a href="produtos.php?categorias='.$kcat.'">'.$nome."</a>";
+                    print '<li><a href="produtos.php?categoria=' . $kcat . '">' . $nome . '</a></li>';
                 }
                 ?>
             </ul>
@@ -27,6 +28,9 @@ require_once "init.php";
         <div class="juntar">
             <?php
             foreach ($_SESSION["produtos"] as $produto) {
+            
+                if ($categoria_get === '' || $produto['categoria']===$categoria_get) {
+
                 print '
                 <div class="card">
                     <img src="' . $produto['imagem'] . '" width="300" height="170">
@@ -35,6 +39,7 @@ require_once "init.php";
                         <h3 class="card_h2">Comprar</h3>
                     </a>
                 </div>';
+            }
             }
             ?>
         </div>
