@@ -11,6 +11,7 @@ $produtos_base = [
     [
         'id' => 1,
         'nome' => 'Mesa Orgânica Geometric',
+        'estoque' => '100',
         'preco' => 6930,00,
         'categoria' => 'mesa',
         'descricao_curta' => 'Madeira maciça de reflorestamento',
@@ -21,6 +22,7 @@ $produtos_base = [
         'id' => 2,
         'nome' => 'Buffet de madeira',
         'preco' => 4500,00,
+        'estoque' => '100',
         'categoria' => 'outros',
         'descricao_curta' => 'Confortável e resistente',
         'descricao' => 'Cadeira elegante para sala de jantar',
@@ -31,6 +33,7 @@ $produtos_base = [
 
         'id' => 3,
         'nome' => 'Cadeira Portugal',
+        'estoque' => '100',
         'preco' => 500,00,
         'categoria' => 'cadeira',
         'descricao_curta' => 'Design sofisticado',
@@ -40,6 +43,7 @@ $produtos_base = [
     [
         'id' => 4,
         'nome' => 'Rack de madeira',
+        'estoque' => '100',
         'preco' => 2500,00,
         'categoria' => 'outros',
         'descricao_curta' => 'Design sofisticado',

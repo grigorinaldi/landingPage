@@ -35,7 +35,7 @@ $categoria_get = isset($_GET["categoria"])? trim($_GET["categoria"]):"";
                 <div class="card">
                     <img src="' . $produto['imagem'] . '" width="300" height="170">
                     <h2>' . $produto['nome'] . '<br><br>R$ ' . number_format($produto['preco'], 2, ',', '.') . '</h2>
-                    <a href="#" class="link">
+                    <a href="produto-detalhes.php?id='.$produto['id'].'" class="link">
                         <h3 class="card_h2">Comprar</h3>
                     </a>
                 </div>';
